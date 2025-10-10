@@ -9,7 +9,7 @@ Deploy your contracts to a testnet then build and upload your app to a public we
 
 There is also a 🎥 [Youtube video](https://www.youtube.com/watch?v=eP5w6Ger1EQ) that may help you understand the concepts covered within this challenge too:
 
-💬 Meet other builders working on this challenge and get help in the [Challenge Telegram](https://t.me/+_NeUIJ664Tc1MzIx).
+💬 Meet other builders working on this challenge and get help in the [Challenge Telegram](https://t.me/+_NeUIJ664Tc1MzIx)
 
 ---
 
