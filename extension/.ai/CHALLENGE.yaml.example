@@ -171,8 +171,8 @@ completion_message: |
 
   ## Next Steps
 
-  Follow the README to:
-  - Deploy your contract locally with `yarn deploy`
+  Follow the README.md to:
+  - Deploy your contract locally with `yarn deploy --network <your-testnet>`
   - Deploy to a testnet
   - Share your work with friends!
 
