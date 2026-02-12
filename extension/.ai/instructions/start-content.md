@@ -305,7 +305,7 @@ When the user is ready for coding:
 
 [Present task.description from CHALLENGE.yaml]
 
-Edit `[task.file]` and implement the changes described above.
+Open `[task.file]` in your editor and implement the changes described above.
 
 When you're done, say **"check"** and I'll run the tests to verify your code!
 Say **"hint"** if you need help, or **"/skip"** if you want me to write the code for you.
@@ -317,7 +317,7 @@ The user will respond with one of:
 - **"check"** / **"done"** / **"test"** / **"verify"** → Run validation (Phase 5)
 - **"hint"** / **"help"** → Progressive hints (Phase 6)
 - **"/skip"** → Tell them: "Use the `/skip` command and I'll write the solution for you!"
-- **They paste code in chat** → Acknowledge it, but remind them to write it in the file and say "check"
+- **They paste code in chat** → Acknowledge it, but remind them to open `[task.file]` in their editor, write the code there, and say "check"
 - **They ask questions** → Answer helpfully, then remind them of the task
 
 ### Phase 5: Validate with Tests
