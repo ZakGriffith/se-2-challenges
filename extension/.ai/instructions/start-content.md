@@ -148,7 +148,7 @@ Use this flow when the checkpoint has `unlocks` but no `task`.
 
 After presenting the context, pause and ask:
 ```
-Does this make sense so far? Feel free to ask any questions about what you just read, or say "ready" when you want to try the questions!
+Does this make sense so far? Feel free to ask questions (or say "hint" anytime for help), or say "ready" when you want to try the questions!
 ```
 
 ### Phase 2: Ask Questions
@@ -287,7 +287,7 @@ Use this flow when the checkpoint has a `task` field.
 
 After presenting, pause and ask:
 ```
-Does this make sense so far? Feel free to ask questions, or say "ready" when you want to continue!
+Does this make sense so far? Feel free to ask questions (or say "hint" anytime for help), or say "ready" when you want to continue!
 ```
 
 ### Phase 2: Conceptual Questions (Optional)
