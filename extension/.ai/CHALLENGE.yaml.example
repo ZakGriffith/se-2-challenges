@@ -21,7 +21,7 @@
 name: "Your Challenge Name"
 version: "1.0"
 description: "Brief description of what users will learn and build"
-difficulty: "beginner" # Metadata about the challenge's inherent complexity (beginner/intermediate/advanced). This is NOT the user's level — the AI asks the user their experience level at /start and adapts teaching dynamically.
+difficulty: "beginner" # Metadata about the challenge's inherent complexity (beginner/intermediate/advanced)
 estimated_time: "30-45 minutes"
 
 # Setup template - OPTIONAL
