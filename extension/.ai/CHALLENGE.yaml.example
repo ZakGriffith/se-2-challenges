@@ -172,9 +172,12 @@ completion_message: |
 
   ## Next Steps
 
-  Follow the README.md to:
-  - Deploy your contract locally with `yarn deploy --network <your-testnet>`
-  - Deploy to a testnet
-  - Share your work with friends!
+  - Test your contracts with `yarn test`
+
+  To submit your challenge, complete the remaining checkpoints on the
+  [SpeedRunEthereum challenge page](https://speedrunethereum.com/challenge/{challenge-name}):
+  - Deploy your contract
+  - Ship your frontend
+  - Verify your contract
 
   Head to your next challenge at [SpeedRunEthereum.com](https://speedrunethereum.com)!
