@@ -18,11 +18,32 @@ welcome_message: |
   3. How token swaps work (`ethToToken` and `tokenToEth`)
   4. How liquidity providers deposit and withdraw proportionally
 
+  **Before we start, open separate terminal windows** (not this one!) and run:
+
+  1. Start your local blockchain:
+     ```
+     yarn chain
+     ```
+  2. In another terminal, deploy the contracts:
+     ```
+     yarn deploy
+     ```
+  3. In another terminal, start the frontend:
+     ```
+     yarn start
+     ```
+  4. Open http://localhost:3000 in your browser.
+
+  > These commands run continuously, so each needs its own terminal window.
+
   **How this works:**
   - I'll teach you a concept, then give you a coding task
   - You write the code in your editor, then say **"check"** and I'll run the tests
+  - After each checkpoint you'll interact with the frontend to see your code in action
   - Say **"hint"** anytime you're stuck — hints get progressively more specific
   - Use **`/skip`** if you want me to write the code and explain it
+
+  > Re-run `yarn deploy --reset` whenever you want to redeploy with a fresh contract address.
 
   Your progress is saved automatically. Use `/start` to resume anytime.
 
@@ -114,6 +135,17 @@ checkpoints:
 
         **4. Implement `getLiquidity(address lp)`:**
         - Return `liquidity[lp]`
+
+        ### Try it out
+
+        After writing the code:
+
+        1. **Deploy script**: Open `packages/hardhat/deploy/00_deploy_dex.ts`. Uncomment the line under "CHECKPOINT 2" that sends 10 BAL to your frontend address (paste in your actual frontend address from http://localhost:3000).
+        2. Run `yarn deploy --reset` to deploy your updated contracts.
+        3. Open http://localhost:3000 — navigate to the `Debug Contracts` tab. You should see `DEX` and `Balloons` contracts.
+        4. On the `Balloons` contract, call `approve()` with the DEX address as spender and 5 (* 10**18) as amount.
+        5. Get some ETH from the faucet, then on the `DEX` contract call `init()` with tokens = 5 (* 10**18) and payable value = 5 (* 10**18).
+        6. Go to http://localhost:3000/dex — verify the DEX shows ETH + $BAL reserves and your liquidity value is non-zero.
 
         Say **"check"** when you're ready!
       file: "packages/hardhat/contracts/DEX.sol"
@@ -233,6 +265,15 @@ checkpoints:
         4. Return `numerator / denominator`
 
         This is a `pure` function — it doesn't read or modify state, just does math.
+
+        ### Try it out
+
+        After writing the code:
+
+        1. **Deploy script**: Open `packages/hardhat/deploy/00_deploy_dex.ts`. Uncomment the "CHECKPOINT 3" section so the DEX is automatically initialized with liquidity on deploy.
+        2. Redeploy with `yarn deploy --reset`.
+        3. Go to http://localhost:3000/dex — type values into the swap inputs. The curve preview should move and show output estimates (including the 0.3% fee).
+        4. Try it in the Debug Contracts tab too: call `price()` with 1000000 ETH reserves, 1000000 token reserves, and 1000 input — you should get ~996 back (nearly 1:1 with fee + tiny slippage).
 
         Say **"check"** when you're ready!
       file: "packages/hardhat/contracts/DEX.sol"
@@ -362,6 +403,14 @@ checkpoints:
         - Use `price()` to compute ETH output
         - Pull tokens with `transferFrom`; send ETH with `call`
         - Emit `TokenToEthSwap`
+
+        ### Try it out
+
+        After writing the code, go to http://localhost:3000/dex and try:
+
+        - **ETH → Token**: enter some ETH and click swap
+        - **Token → ETH**: first approve the DEX to spend your $BAL (in the Balloons section), then swap tokens back to ETH
+        - Check the **Events** tab to make sure swap events are showing up.
 
         Say **"check"** when you're ready!
       file: "packages/hardhat/contracts/DEX.sol"
@@ -546,6 +595,16 @@ checkpoints:
         - Decrease `liquidity[msg.sender]` and `totalLiquidity`
         - Send ETH with `call`; transfer tokens with `token.transfer()`
         - Emit `LiquidityRemoved`
+
+        ### Try it out
+
+        After writing the code:
+
+        1. Redeploy with `yarn deploy --reset`, then go to http://localhost:3000/dex and try:
+           - Approve the DEX to spend your $BAL
+           - Deposit some ETH (observe that it also pulls the proportional amount of tokens)
+           - Withdraw some liquidity and verify you receive both ETH and $BAL back
+        2. Check the **Events** tab to make sure liquidity events are showing up.
 
         Say **"check"** when you're ready!
       file: "packages/hardhat/contracts/DEX.sol"
