@@ -56,7 +56,6 @@ checkpoints:
   - id: "reserves-init"
     title: "Reserves & init()"
     description: "Add state variables for liquidity tracking and implement init() to seed the pool"
-    deployAfterCheckpoint: true
 
     context: |
       ## How a Liquidity Pool Starts
@@ -197,7 +196,6 @@ checkpoints:
   - id: "price"
     title: "Price Function"
     description: "Implement the constant-product pricing formula with a 0.3% trading fee"
-    deployAfterCheckpoint: false
 
     context: |
       ## The Constant Product Formula
@@ -311,7 +309,6 @@ checkpoints:
   - id: "swapping"
     title: "Trading"
     description: "Implement ethToToken() and tokenToEth() swap functions"
-    deployAfterCheckpoint: true
 
     context: |
       ## Swapping Assets
@@ -505,7 +502,6 @@ checkpoints:
   - id: "liquidity"
     title: "Liquidity"
     description: "Implement deposit() and withdraw() for liquidity providers"
-    deployAfterCheckpoint: true
 
     context: |
       ## Liquidity Provisioning
