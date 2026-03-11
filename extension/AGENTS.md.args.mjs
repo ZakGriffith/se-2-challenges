@@ -215,4 +215,21 @@ Run with \`yarn test\`. These same tests are used by the Speedrun Ethereum autog
 - In \`ethToToken()\`, use \`address(this).balance - msg.value\` as the ETH reserve to get the balance *before* the incoming ETH
 - LP share calculation in \`deposit()\` must use the pre-deposit ETH reserve
 - Implement \`getLiquidity()\` getter, the autograder checks for it
+
+# Speedrun Ethereum AI-Guided mode
+
+This project has an interactive AI learning mode for blockchain development.
+
+## Quick Start
+Run \`/start\` to begin. The AI will guide you through building a smart contract interactively.
+
+## Commands
+- \`/start\` — Begin or resume the challenge
+- \`/skip\` — Skip current coding task (AI writes + explains solution)
+- \`hint\` — Get help anytime
+- \`check\` — Validate your code (code-writing challenges)
+
+## Key Files
+- \`extension/.ai/CHALLENGE.yaml\` — Challenge definition
+- \`.challenge-ai/progress.json\` — Your progress (auto-generated)
 `;
