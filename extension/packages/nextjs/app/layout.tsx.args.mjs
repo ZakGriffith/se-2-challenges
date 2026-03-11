@@ -9,7 +9,7 @@ const spaceGrotesk = Space_Grotesk({
 
 // CHALLENGE-TODO: Update the metadataOverrides to reflect your challenge
 export const metadataOverrides = {
-  title: "YOUR CHALLENGE TITLE | SpeedRunEthereum",
+  title: "YOUR CHALLENGE TITLE | Speedrun Ethereum",
   description: "Built with 🏗 Scaffold-ETH 2",
 };
 

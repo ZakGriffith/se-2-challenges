@@ -175,9 +175,9 @@ completion_message: |
   - Test your contracts with `yarn test`
 
   To submit your challenge, complete the remaining checkpoints on the
-  [SpeedRunEthereum challenge page](https://speedrunethereum.com/challenge/{challenge-name}):
+  [Speedrun Ethereum challenge page](https://speedrunethereum.com/challenge/{challenge-name}):
   - Deploy your contract
   - Ship your frontend
   - Verify your contract
 
-  Head to your next challenge at [SpeedRunEthereum.com](https://speedrunethereum.com)!
+  Head to your next challenge at [Speedrun Ethereum.com](https://speedrunethereum.com)!

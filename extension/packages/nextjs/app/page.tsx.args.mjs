@@ -17,7 +17,7 @@ export const description = `
             🌟 The final deliverable is an app that CHALLENGE DELIVERABLE. Deploy your contracts to a
             testnet then build and upload your app to a public web server. Submit the url on{" "}
             <a href="https://speedrunethereum.com/" target="_blank" rel="noreferrer" className="underline">
-              SpeedRunEthereum.com
+              Speedrun Ethereum.com
             </a>{" "}
             !
           </p>
@@ -28,4 +28,4 @@ export const description = `
 `;
 
 // CHALLENGE-TODO: Update the externalExtensionName to reflect your challenge
-export const externalExtensionName = "SpeedRunEthereum CHALLENGE TITLE";
+export const externalExtensionName = "Speedrun Ethereum CHALLENGE TITLE";

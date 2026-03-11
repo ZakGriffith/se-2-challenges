@@ -17,7 +17,7 @@ export const extraContents = `# {challengeEmoji} {challengeTitle}
 A {challengeDescription}.
 
 🌟 The final deliverable is an app that {challengeDeliverable}.
-Deploy your contracts to a testnet then build and upload your app to a public web server. Submit the url on [SpeedRunEthereum.com](https://speedrunethereum.com)!
+Deploy your contracts to a testnet then build and upload your app to a public web server. Submit the url on [Speedrun Ethereum.com](https://speedrunethereum.com)!
 
 💬 Meet other builders working on this challenge and get help in the {challengeTelegramLink}
 
