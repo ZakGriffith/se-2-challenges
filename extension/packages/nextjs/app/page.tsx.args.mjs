@@ -28,4 +28,4 @@ export const description = `
 `;
 
 // CHALLENGE-TODO: Update the externalExtensionName to reflect your challenge
-export const externalExtensionName = "SpeedRunEthereum CHALLENGE TITLE";
+export const externalExtensionName = "Speedrun Ethereum CHALLENGE TITLE";
