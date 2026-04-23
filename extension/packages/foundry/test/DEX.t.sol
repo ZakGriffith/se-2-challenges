@@ -197,7 +197,7 @@ contract DEXTest is Test {
         _initDex();
 
         vm.prank(user2);
-        vm.expectRevert(abi.encodeWithSelector(IDEX.InsufficientLiquidity.selector));
+        vm.expectRevert(abi.encodeWithSelector(IDEX.InsufficientLiquidity.selector, uint256(0), uint256(1 ether)));
         dex.withdraw(1 ether);
     }
 
@@ -224,5 +224,5 @@ contract DEXTest is Test {
         assertTrue(found, "LiquidityRemoved event should be emitted");
     }
 
-    receive() external payable {}
+    receive() external payable { }
 }
